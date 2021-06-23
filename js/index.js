@@ -53,7 +53,15 @@ login.addEventListener('click', e => {
 	.then(data => {
 		console.log(data);
 		localStorage.setItem('userstatus', JSON.stringify(data));
-		window.location = "adminMainPage.html";
+		console.log("here");
+		var x = JSON.parse(localStorage.getItem('userstatus'));
+		console.log(x.role);
+		if(x.role === 'admin')
+		window.location = "AdminHomePage.html";
+		else if(x.role === 'student')
+		window.location = "StudentHomePage.html";
+		else if(x.role === 'company')
+		window.location = "CompanyHomePage.html";
 	})
 	.catch(error => console.log("ERROR"+error))
 }
