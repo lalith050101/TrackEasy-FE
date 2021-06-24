@@ -51,9 +51,9 @@ login.addEventListener('click', e => {
 		
 	})
 	.then(data => {
-		console.log(data);
+		//console.log(data);
 		localStorage.setItem('userstatus', JSON.stringify(data));
-		console.log("here");
+		//console.log("here");
 		var x = JSON.parse(localStorage.getItem('userstatus'));
 		console.log(x.role);
 		if(x.role === 'admin')
