@@ -26,7 +26,7 @@ logout.addEventListener('click', e => {
 		
 	})
 	.then(data => {
-        localStorage.removeItem("userstatus");
+        localStorage.clear();
 
 		window.location = "index.html";
 		

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Page</title>
 </head>
-<body>
+<body id="adminpage">
 
     <div>
         <a href="AddStudent.html">Add Student</a>
@@ -17,7 +17,25 @@
     <div>
         <h2> All Jobs </h2>
         Jobs list visible here
+        <table>
+            <thead>
+                <tr>
+                    <th>Job Id</th>
+                    <th>Company Name</th>
+                    <th>Job Type</th>
+                    <th>Job Title</th>
+                    <th>Eligible Batch</th>
+                    <th>Eligible Departments</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody id="jobs">
+
+            </tbody>
+        </table>
     </div>
+    <script type="text/javascript" src="js/AdminHomePage.js"></script>
+
     <script type="text/javascript" src="js/logout.js"></script>
 
 </body>
