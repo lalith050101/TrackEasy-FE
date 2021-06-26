@@ -52,6 +52,32 @@ document.addEventListener("DOMContentLoaded", (e) => {
       document.getElementById("jobRoles").innerHTML = "";
       document.getElementById("skills").innerHTML = "";
       document.getElementById("salary").innerHTML = data.salary;
+      document.getElementById(
+        "applyButton"
+      ).innerHTML = `<button onclick='applyJob(${data.jobId})'>Apply</button>`;
     })
     .catch((error) => console.log("ERROR" + error));
 });
+
+function applyJob(jobId) {
+  let token = "Bearer " + JSON.parse(localStorage.getItem("userstatus")).token;
+
+  fetch("http://localhost:8080/student/applyJob/" + jobId, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json; charset=UTF-8",
+      Authorization: token,
+    },
+    body: JSON.stringify({}),
+  })
+    .then((res) => {
+      if (res.ok) {
+        console.log("apply success");
+        document.getElementById("applicationStatus").innerHTML =
+          "Successfully Applied";
+      } else {
+        console.log("not successful");
+      }
+    })
+    .catch((error) => console.log("ERROR" + error));
+}
