@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Page</title>
-</head>
-<body id="adminpage">
-
+  </head>
+  <body id="adminpage">
     <div>
-        <a href="AddStudent.html">Add Student</a>
-        <a href="AddCompany.html">Add Company</a>
-        <button id="logout">Logout</button>
+      <a href="AddStudent.html">Add Student</a>
+      <a href="AddCompany.html">Add Company</a>
+      <button id="logout">Logout</button>
     </div>
 
     <div>
-        <h2> All Jobs </h2>
-        Jobs list visible here
-        <table>
-            <thead>
-                <tr>
-                    <th>Job Id</th>
-                    <th>Company Name</th>
-                    <th>Job Type</th>
-                    <th>Job Title</th>
-                    <th>Eligible Batch</th>
-                    <th>Eligible Departments</th>
-                    <th>Salary</th>
-                </tr>
-            </thead>
-            <tbody id="jobs">
+      <h2>All Jobs</h2>
 
-            </tbody>
-        </table>
+      <table>
+        <thead>
+          <tr>
+            <th>Job Id</th>
+            <th>Company Name</th>
+            <th>Job Type</th>
+            <th>Job Title</th>
+            <th>Eligible Batch</th>
+            <th>Eligible Departments</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+        <tbody id="jobs"></tbody>
+      </table>
     </div>
     <script type="text/javascript" src="js/AdminHomePage.js"></script>
 
     <script type="text/javascript" src="js/logout.js"></script>
-
-</body>
+  </body>
 </html>

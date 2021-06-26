@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Home Page - TrackEasy </title>
-</head>
-<body>
-    Inside Student Home Page
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Home Page - TrackEasy</title>
+  </head>
+  <body>
+    <div>
+      <a href="Notifications.html">Notifications</a>
+      <a href="StudentProfile.html">Profile</a>
+      <img src="" alt="" />
+      <button id="logout">Logout</button>
+    </div>
+
+    <div>
+      <h2>Eligible Jobs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Company Name</th>
+            <th>Job Type</th>
+            <th>Job Title</th>
+            <th>Salary</th>
+            <th>Apply Before</th>
+            <th>View</th>
+          </tr>
+        </thead>
+        <tbody id="jobs"></tbody>
+      </table>
+    </div>
+    <script type="text/javascript" src="js/StudentHomePage.js"></script>
+
+    <script type="text/javascript" src="js/logout.js"></script>
+  </body>
 </html>
