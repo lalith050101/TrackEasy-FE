@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
           temp += "<td>" + job.jobTitle + "</td>";
           temp += "<td>" + job.salary + "</td>";
           temp += "<td>" + job.registrationLastDate + "</td>";
-          temp += `<td><button onclick='viewJobDetails(${job.jobId})'>View</button></td></tr>`;
+          temp += `<td><button class="view"  onclick='viewJobDetails(${job.jobId})'>View</button></td></tr>`;
         });
         document.getElementById("jobs").innerHTML = temp;
       }

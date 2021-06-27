@@ -2,241 +2,249 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/studentprofilecss.css" />
+    <link rel="icon" href="img/avatar2.png" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Profile - Track Easy</title>
   </head>
   <body>
-    Inside student Profile
-
-    <div class="container">
-      <div>
-        <a href="Notifications.html">Notifications</a>
-        <a href="StudentProfile.html">Profile</a>
-        <img src="" alt="" />
-        <button id="logout">Logout</button>
-      </div>
-
-      <div>
-        <form>
+    <div class="topnav">
+      <img src="img/avatar2.png">
+      <a class="active" href="StudentHomePage.html">Home</a>
+      <a href="StudentProfile.html">Profile</a>
+      <a href="Notifications.html" class="notification">
+      <span class="fa fa-bell"></span>
+      </a>
+          <img src="" alt="" />
+          <input style="float:right;" type="submit" id="logout" value="Logout">
+        </div>
+    
           <div>
-            <div class="div">
-              <h5>Registration Number</h5>
-              <input type="number" id="regNo" disabled class="input" />
+            <form onsubmit="updateProfilefn(event)">
+              <div>
+                <div class="row">
+            <div class="col-25">
+                  <label for="regNo">Register Number</label>
             </div>
-          </div>
-          <div>
-            <div class="div">
-              <h5>Email</h5>
-              <input type="email" id="email" disabled class="input" />
+            <div class="col-75">
+                  <input type="number" id="regNo" disabled class="input" />
+                </div>
+              </div>
+          <div class="row">
+            <div class="col-25">
+                  <label for="email">Email</label>
             </div>
-          </div>
-          <div>
-            <div class="div">
-              <h5>First Name</h5>
-              <input type="text" id="firstName" disabled class="input" />
+            <div class="col-75">
+                  <input type="email" id="email" disabled class="input" />
+                </div>
+              </div>
+              <div class="row">
+            <div class="col-25">
+                  <label for="firstName">First Name</label>
             </div>
-          </div>
-          <div>
-            <div class="div">
-              <h5>Last Name</h5>
-              <input type="text" id="lastName" disabled class="input" />
+            <div class="col-75">
+                  <input type="text" id="firstName" disabled class="input" />
+                </div>
+              </div>
+              <div class="row">
+            <div class="col-25">
+                  <label for="lastName">Last Name</label>
             </div>
-          </div>
-          <div>
-            <div class="div">
-              <h5>Department</h5>
-              <input type="text" id="department" disabled class="input" />
+            <div class="col-75">
+                  <input type="text" id="lastName" disabled class="input" />
+                </div>
+              </div>
+              <div class="row">
+            <div class="col-25">
+                  <label for="department">Department</label>
             </div>
-          </div>
-          <div>
-            <div class="div">
-              <h5>Batch</h5>
-              <input type="number" id="batch" disabled class="input" />
+            <div class="col-75">
+                  <input type="text" id="department" disabled class="input" />
+                </div>
+              </div>
+              <div class="row">
+            <div class="col-25">
+                  <label for="batch">Batch</label>
             </div>
-          </div>
-          <div>
-            <div class="div">
-              <h5>Tenth Percentage</h5>
-              <input
-                type="number"
-                id="tenthPercentage"
-                min="0"
-                max="100"
-                step="0.01"
-                disabled
-                class="input"
-              />
+            <div class="col-75">
+                  <input type="number" id="batch" disabled class="input" />
+                </div>
+              </div>
+              <div class="row">
+            <div class="col-25">
+                  <label for="tenthPercentage">Tenth Percentage</label>
             </div>
-          </div>
-          <div>
-            <div class="div">
-              <h5>Tenth Board of Study</h5>
-              <input
-                type="text"
-                id="tenthBoardOfStudy"
-                disabled
-                class="input"
-              />
+            <div class="col-75">
+                  <input type="number"
+                    id="tenthPercentage"
+                    min="0"
+                    max="100"
+                    step="0.01"
+                    disabled
+                    class="input"
+                  />
+                </div>
+              </div>
+          <div class="row">
+            <div class="col-25">
+                  <label for="tenthBoardOfStudy">Tenth Board of Study</label>
             </div>
-          </div>
-          <div>
-            <div class="div">
-              <h5>Tenth Institution</h5>
-              <input type="text" id="tenthInstitution" disabled class="input" />
+            <div class="col-75">
+                  <input type="text" id="tenthBoardOfStudy" disabled class="input" />
+                </div>
+              </div>
+              <div class="row">
+            <div class="col-25">
+                  <label for="tenthInstitution">Tenth Institution</label>
             </div>
-          </div>
-          <div>
-            <div class="div">
-              <h5>Tenth Year of Pass</h5>
-              <input
-                type="number"
-                id="tenthYearOfPass"
-                disabled
-                class="input"
-              />
+            <div class="col-75">
+                  <input type="text" id="tenthInstitution" disabled class="input" />
+                </div>
+              </div>
+              <div class="row">
+            <div class="col-25">
+                  <label for="tenthYearOfPass">Tenth Year of Pass</label>
             </div>
-          </div>
-
-          <div>
-            <div class="div">
-              <h5>12th Percentage</h5>
-              <input
-                type="number"
-                id="twelfthPercentage"
-                min="0"
-                max="100"
-                step="0.01"
-                disabled
-                class="input"
-              />
+            <div class="col-75">
+                  <input type="number" id="tenthYearOfPass" disabled class="input" />
+                </div>
+              </div>
+              <div class="row">
+            <div class="col-25">
+                  <label for="twelfthPercentage">12th Percentage</label>
             </div>
-          </div>
-          <div>
-            <div class="div">
-              <h5>12th Board of Study</h5>
-              <input
-                type="text"
-                id="twelfthBoardOfStudy"
-                disabled
-                class="input"
-              />
+            <div class="col-75">
+                  <input type="number"
+                    id="twelfthPercentage"
+                    min="0"
+                    max="100"
+                    step="0.01"
+                    disabled
+                    class="input"
+                  />
+                </div>
+              </div>
+    
+              <div class="row">
+            <div class="col-25">
+                  <label for="twelfthBoardOfStudy">12th Board of Study</label>
             </div>
-          </div>
-          <div>
-            <div class="div">
-              <h5>12th Institution</h5>
-              <input
-                type="text"
-                id="twelfthInstitution"
-                disabled
-                class="input"
-              />
+            <div class="col-75">
+                  <input type="text" id="twelfthBoardOfStudy" disabled class="input" />
+                </div>
+              </div>
+              <div class="row">
+            <div class="col-25">
+                  <label for="twelfthInstitution">12th Institution</label>
             </div>
-          </div>
-          <div>
-            <div class="div">
-              <h5>12th Year of Pass</h5>
-              <input
-                type="number"
-                id="twelfthYearOfPass"
-                disabled
-                class="input"
-              />
+            <div class="col-75">
+                  <input type="text" id="twelfthInstitution" disabled class="input" />
+                </div>
+              </div>
+              <div class="row">
+            <div class="col-25">
+                  <label for="twelfthYearOfPass">12th Year of Pass</label>
             </div>
-          </div>
-
-          <div>
-            <div class="div">
-              <h5>Degree Percentage</h5>
-              <input
-                type="number"
-                id="degreePercentage"
-                min="0"
-                max="100"
-                step="0.01"
-                disabled
-                class="input"
-              />
+            <div class="col-75">
+                  <input type="number" id="twelfthYearOfPass" disabled class="input" />
+                </div>
+              </div>
+              <div class="row">
+            <div class="col-25">
+                  <label for="degreePercentage">Degree Percentage</label>
+           </div>
+           <div class="col-75">
+                  <input
+                    type="number"
+                    id="degreePercentage"
+                    min="0"
+                    max="100"
+                    step="0.01"
+                    disabled
+                    class="input"
+                  />
+                </div>
+              </div>
+          <div class="row">
+            <div class="col-25">
+                  <label for="degreeUniversity">Degree of Study</label>
             </div>
-          </div>
-          <div>
-            <div class="div">
-              <h5>Degree University</h5>
-              <input type="text" id="degreeUniversity" disabled class="input" />
+            <div class="col-75">
+                  <input type="text" id="degreeUniversity" disabled class="input" />
+                </div>
+              </div>
+              <div class="row">
+            <div class="col-25">
+                  <label for="degreeInstitution">Degree Institution</label>
             </div>
-          </div>
-          <div>
-            <div class="div">
-              <h5>Degree Institution</h5>
-              <input
-                type="text"
-                id="degreeInstitution"
-                disabled
-                class="input"
-              />
+            <div class="col-75">
+                  <input type="text" id="degreeInstitution" disabled class="input" />
+                </div>
+              </div>
+              <div class="row">
+            <div class="col-25">
+                  <label for="degreeYearOfPass">Year of Pass</label>
             </div>
-          </div>
-          <div>
-            <div class="div">
-              <h5>Degree Year of Pass</h5>
-              <input
-                type="number"
-                id="degreeYearOfPass"
-                disabled
-                class="input"
-              />
+            <div class="col-75">
+                  <input type="number" id="degreeYearOfPass" disabled class="input" />
+                </div>
+              </div>
+              <div class="row">
+            <div class="col-25">
+                  <label for="standingArrears">Standing Arrears</label>
             </div>
-          </div>
-          <div>
-            <div class="div">
-              <h5>Standing Arrears</h5>
-              <input
-                type="number"
-                id="standingArrears"
-                disabled
-                class="input"
-              />
+            <div class="col-75">
+                  <input type="number" id="standingArrears" disabled class="input" />
+                </div>
+              </div>
+              <div class="row">
+            <div class="col-25">
+                  <label for="historyOfArrears">History of Arrears</label>
             </div>
-          </div>
-          <div>
-            <div class="div">
-              <h5>History of Arrears</h5>
-              <input
-                type="number"
-                id="historyOfArrears"
-                disabled
-                class="input"
-              />
+            <div class="col-75">
+                  <input type="number" id="historyOfArrears" disabled class="input" />
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-25">
+                  <label for="project1Description">Project 1 Description</label>
             </div>
-          </div>
-          <div>
-            <div class="div">
-              <h5>Project 1 Description</h5>
-              <textarea
-                id="project1Description"
-                rows="6"
-                cols="50"
-                disabled
-              ></textarea>
+            <div class="col-75">
+                  <textarea
+                    id="project1Description"
+                    rows="6"
+                    cols="50"
+                    disabled
+                  ></textarea>
+                </div>
+              </div>
+          <div class="row">
+                <div class="col-25">
+                  <label for="project1Description">Project 2 Description</label>
             </div>
+            <div class="col-75">
+                  <textarea
+                    id="project2Description"
+                    rows="6"
+                    cols="50"
+                    disabled
+                  ></textarea>
+                </div>
+              </div>
+              <center>
+              <input type="submit" id="editProfile" class="btn"value="Edit Profile">
+              <input type="submit" id="updateProfile" class="btn" value="Update Profile">
+          <center>
+            </form>
           </div>
-          <div>
-            <div class="div">
-              <h5>Project 2 Description</h5>
-              <textarea
-                id="project2Description"
-                rows="6"
-                cols="50"
-                disabled
-              ></textarea>
-            </div>
-          </div>
-          <button id="editProfile" class="btn">Edit Profile</button>
-          <button id="updateProfile" class="btn">Update Profile</button>
-        </form>
-      </div>
-    </div>
-    <script type="text/javascript" src="js/StudentProfile.js"></script>
+        </div>
+        <script type="text/javascript" src="js/StudentProfile.js"></script>
+        <script type="text/javascript" src="js/logout.js"></script>
   </body>
 </html>

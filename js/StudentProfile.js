@@ -62,13 +62,15 @@ editProfile.addEventListener("click", (e) => {
   for (var i = 0; i < inputs.length; i++) {
     inputs[i].disabled = false;
   }
+  document.getElementById("email").disabled = true;
+  document.getElementById("regNo").disabled = true;
   var textareas = document.getElementsByTagName("textarea");
   for (var i = 0; i < textareas.length; i++) {
     textareas[i].disabled = false;
   }
 });
 
-updateProfile.addEventListener("click", (e) => {
+function updateProfilefn(e) {
   e.preventDefault();
   var inputs = document.getElementsByTagName("input");
   for (var i = 0; i < inputs.length; i++) {
@@ -106,7 +108,7 @@ updateProfile.addEventListener("click", (e) => {
   ).value;
   let project2Description = document.getElementById(
     "project2Description"
-  ).batch;
+  ).value;
 
   let token = "Bearer " + JSON.parse(localStorage.getItem("userstatus")).token;
 
@@ -145,7 +147,7 @@ updateProfile.addEventListener("click", (e) => {
   })
     .then((res) => {
       if (res.ok) {
-        console.log("success");
+        console.log("successfully updated");
         return res.json();
       } else {
         console.log("not successful");
@@ -155,4 +157,4 @@ updateProfile.addEventListener("click", (e) => {
       window.location = "StudentHomePage.html";
     })
     .catch((error) => console.log("ERROR" + error));
-});
+}

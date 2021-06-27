@@ -2,102 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Student - TrackEasy</title>
+    <link rel="stylesheet" href="css/addstudentcss.css">
+	<link rel="icon" href="img/avatar2.png">
+	<title>Add Student - TrackEasy</title>
 </head>
 <body>
-    
-    <div class="container">
-		
-        <div>
-            <button id="logout">Logout</button>
-        </div>
 
-		<div>
-			<form >
-								
-           		<div>
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Name</h5>
-           		   		<input type="text" id="name" class="input">
-           		   </div>
-           		</div>
-                <div>
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Email</h5>
-           		   		<input type="email" id="email" class="input">
-           		   </div>
-           		</div>
-                <div>
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Mobile Number</h5>
-           		   		<input type="number" id="mobno" class="input">
-           		   </div>
-           		</div> 
-                <div>
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Registration Number</h5>
-           		   		<input type="number" id="regno" class="input">
-           		   </div>
-           		</div>     
-                <div>
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>First Name</h5>
-           		   		<input type="text" id="fname" class="input">
-           		   </div>
-           		</div>
-                <div>
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Last Name</h5>
-           		   		<input type="text" id="lname" class="input">
-           		   </div>
-           		</div>
-                <div>
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Department</h5>
-           		   		<input type="text" id="dept" class="input">
-           		   </div>
-           		</div>
-                <div>
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Batch</h5>
-           		   		<input type="number" id="batch" class="input">
-           		   </div>
-           		</div>
-           		
-
-				<button type="submit" id="addstudent" class="btn" >Add Student</button>
-
-            </form>
-        </div>
-    </div>
-    <script type="text/javascript" src="js/AddStudent.js"></script>
-    <script type="text/javascript" src="js/logout.js"></script>
+<div class="topnav">
+	<img src="img/avatar2.png">
+	<a class="active" href="AdminHomePage.html">Home</a>
+	<a href="AddStudent.html">Add Student</a>
+	<a href="AddCompany.html">Add Company</a>
+	<div class="login-container">
+	  
+		<button style="float:right;" type="submit" id="logout" >Logout</button>
+	  
+	</div>
+  </div>
+  <br/>
+  <br/>
+  
+  	<form  onsubmit="addstudentfn(event)">
+	  <div class="row">
+		<div class="col-25">
+		  <label for="name">Name</label>
+		</div>
+		<div class="col-75">
+		  <input type="text" id="name" name="name" placeholder="Enter your name" required>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-25">
+		  <label for="email">Email</label>
+		</div>
+		<div class="col-75">
+		  <input type="email" id="email" name="email" placeholder="Enter your mail id">
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-25">
+		  <label for="mobno">Mobile Number</label>
+		</div>
+		<div class="col-75">
+		  <input type="number" id="mobno" name="mobno" placeholder="Enter your Mobile Number" required>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-25">
+		  <label for="regno">Registration Number</label>
+		</div>
+		<div class="col-75">
+		  <input type="number" id="regno" name="regno" placeholder="Enter your College Register Number" required>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-25">
+		  <label for="fname">First Name</label>
+		</div>
+		<div class="col-75">
+		  <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-25">
+		  <label for="lname">Last Name</label>
+		</div>
+		<div class="col-75">
+		  <input type="text" id="lname" name="lname" placeholder="Enter your last name" required>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-25">
+		  <label for="dept">Department</label>
+		</div>
+		<div class="col-75">
+		  <select id="dept" name="dept">
+			<option value="IT">IT</option>
+			<option value="CSE">CSE</option>
+			<option value="ECE">ECE</option>
+			<option value="EEE">EEE</option>
+			<option value="EIE">EIE</option>
+		  </select>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-25">
+		  <label for="batch">Batch</label>
+		</div>
+		<div class="col-75">
+		  <select id="batch" name="batch">
+			<option value="2020">2020</option>
+			<option value="2021">2021</option>
+			<option value="2022">2022</option>
+			<option value="2023">2023</option>
+			<option value="2024">2024</option>
+			<option value="2024">2025</option>
+		  </select>
+		</div>
+	  </div>
+	  <br/>
+	  
+	  <center>
+		<div >
+		<input  type="submit"  id="addstudent" value="Add Student">
+	  </div>
+	  </center>
+	</form>
+  </div>
+	  <script type="text/javascript" src="js/AddStudent.js"></script>
+	  <script type="text/javascript" src="js/logout.js"></script>
 
 </body>
 </html>

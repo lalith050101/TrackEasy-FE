@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Track Easy</title>
+    <link rel="icon" href="img/avatar2.png" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
@@ -16,7 +17,7 @@
         <img src="img/bg.svg" />
       </div>
       <div class="login-content">
-        <form>
+        <form onsubmit="loginfn(event)">
           <img src="img/avatar1.png" id="avatar" />
 
           <div class="input-div one">
@@ -25,7 +26,7 @@
             </div>
             <div class="div">
               <h5>Email</h5>
-              <input type="text" id="email" class="input" />
+              <input type="email" id="email" class="input" />
             </div>
           </div>
           <div class="input-div pass">
@@ -40,8 +41,6 @@
           <a href="#">Forgot Password?</a>
 
           <button type="submit" id="login" class="btn">Login</button>
-
-          <input type="submit" class="btn" value="Sign Up" />
         </form>
       </div>
     </div>

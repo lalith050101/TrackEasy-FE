@@ -13,7 +13,7 @@
       </div>
 
       <div>
-        <form>
+        <form onsubmit="postJobfn(event)">
           <div>
             <h5>Company Name</h5>
             <input type="text" id="companyName" class="input" />
@@ -101,7 +101,7 @@
           </div>
           <div>
             <h5>Salary</h5>
-            <input type="number" min="0" id="Salary" class="input" />
+            <input type="number" min="0" id="salary" class="input" />
           </div>
           <div>
             <h5>Registration Last Date</h5>
@@ -112,7 +112,7 @@
             <input type="date" id="campusDate" class="input" />
           </div>
 
-          <button type="submit" id="postJob" class="btn">Add Company</button>
+          <button type="submit" id="postJob" class="btn">Post Job</button>
         </form>
       </div>
     </div>

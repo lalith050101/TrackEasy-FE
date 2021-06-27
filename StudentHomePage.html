@@ -2,34 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="css/studenthomecss.css" />
+    <link rel="icon" href="img/avatar2.png" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Home Page - TrackEasy</title>
   </head>
   <body>
-    <div>
-      <a href="Notifications.html">Notifications</a>
+    <div class="topnav">
+      <img src="img/avatar2.png" />
+      <a class="active" href="StudentHomePage.html">Home</a>
       <a href="StudentProfile.html">Profile</a>
+      <a href="Notifications.html" class="notification">
+        <span class="fa fa-bell"></span>
+      </a>
       <img src="" alt="" />
-      <button id="logout">Logout</button>
+      <input style="float: right" type="submit" id="logout" value="Logout" />
     </div>
-
-    <div>
-      <h2>Eligible Jobs</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Company Name</th>
-            <th>Job Type</th>
-            <th>Job Title</th>
-            <th>Salary</th>
-            <th>Apply Before</th>
-            <th>View</th>
-          </tr>
-        </thead>
-        <tbody id="jobs"></tbody>
-      </table>
-    </div>
+    <center>
+      <div>
+        <h2>Eligible Jobs</h2>
+        <table id="joblist">
+          <thead>
+            <tr>
+              <th>Company Name</th>
+              <th>Job Type</th>
+              <th>Job Title</th>
+              <th>Salary</th>
+              <th>Apply Before</th>
+            </tr>
+          </thead>
+          <tbody id="jobs"></tbody>
+        </table>
+      </div>
+    </center>
     <script type="text/javascript" src="js/StudentHomePage.js"></script>
 
     <script type="text/javascript" src="js/logout.js"></script>

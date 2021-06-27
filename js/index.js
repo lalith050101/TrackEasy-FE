@@ -21,7 +21,7 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const login = document.getElementById("login");
 
-login.addEventListener("click", (e) => {
+function loginfn(e) {
   e.preventDefault();
   console.log("inside event listener");
   var emailVal = email.value;
@@ -56,4 +56,4 @@ login.addEventListener("click", (e) => {
       else if (x.role === "company") window.location = "CompanyHomePage.html";
     })
     .catch((error) => console.log("ERROR" + error));
-});
+}

@@ -2,34 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="css/adminhomecss.css" />
+    <link rel="icon" href="img/avatar2.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Page</title>
+    <title>Admin Home - Track Easy</title>
   </head>
   <body id="adminpage">
-    <div>
+    <div class="topnav">
+      <img src="img/avatar2.png" />
+      <a class="active" href="AdminHomePage.html">Home</a>
       <a href="AddStudent.html">Add Student</a>
       <a href="AddCompany.html">Add Company</a>
-      <button id="logout">Logout</button>
+      <div class="login-container">
+        <button type="submit" id="logout">Logout</button>
+      </div>
     </div>
 
     <div>
-      <h2>All Jobs</h2>
+      <center>
+        <h2>All Jobs</h2>
+        <br />
 
-      <table>
-        <thead>
-          <tr>
-            <th>Job Id</th>
-            <th>Company Name</th>
-            <th>Job Type</th>
-            <th>Job Title</th>
-            <th>Eligible Batch</th>
-            <th>Eligible Departments</th>
-            <th>Salary</th>
-          </tr>
-        </thead>
-        <tbody id="jobs"></tbody>
-      </table>
+        <table id="joblist">
+          <thead>
+            <tr>
+              <th>Job Id</th>
+              <th>Company Name</th>
+              <th>Job Type</th>
+              <th>Job Title</th>
+              <th>Eligible Batch</th>
+              <th>Eligible Departments</th>
+              <th>Salary</th>
+            </tr>
+          </thead>
+          <tbody id="jobs"></tbody>
+        </table>
+      </center>
     </div>
     <script type="text/javascript" src="js/AdminHomePage.js"></script>
 

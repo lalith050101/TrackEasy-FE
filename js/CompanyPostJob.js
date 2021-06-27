@@ -1,4 +1,4 @@
-postJob.addEventListener("click", (e) => {
+function postJobfn(e) {
   e.preventDefault();
   console.log("inside event listener");
   let companyName = document.getElementById("companyName").value;
@@ -22,7 +22,7 @@ postJob.addEventListener("click", (e) => {
   let maxHistoryOfArrears = document.getElementById(
     "maxHistoryOfArrears"
   ).value;
-  let Salary = document.getElementById("Salary").value;
+  let salary = document.getElementById("salary").value;
   let registrationLastDate = document.getElementById(
     "registrationLastDate"
   ).value;
@@ -50,7 +50,7 @@ postJob.addEventListener("click", (e) => {
       minDegreePercentage: minDegreePercentage,
       maxStandingArrears: maxStandingArrears,
       maxHistoryOfArrears: maxHistoryOfArrears,
-      Salary: Salary,
+      salary: salary,
       registrationLastDate: registrationLastDate,
       campusDate: campusDate,
     }),
@@ -67,4 +67,4 @@ postJob.addEventListener("click", (e) => {
       window.location = "CompanyHomePage.html";
     })
     .catch((error) => console.log("ERROR" + error));
-});
+}
