@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post Job - Track Easy</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <button id="logout">Logout</button>
+      </div>
+
+      <div>
+        <form>
+          <div>
+            <h5>Company Name</h5>
+            <input type="text" id="companyName" class="input" />
+          </div>
+          <div>
+            <h5>Job Type</h5>
+            <input type="text" id="jobType" class="input" />
+          </div>
+          <div>
+            <h5>Job Title</h5>
+            <input type="text" id="jobTitle" class="input" />
+          </div>
+          <div>
+            <h5>Job Description</h5>
+            <textarea id="jobDescription" rows="6" cols="50"></textarea>
+          </div>
+          <div>
+            <h5>Job Location</h5>
+            <input type="text" id="jobLocation" class="input" />
+          </div>
+          <div>
+            <h5>Eligibility</h5>
+            <input type="text" id="eligibility" class="input" />
+          </div>
+          <div>
+            <h5>Eligible Batch</h5>
+            <input type="number" id="eligibleBatch" class="input" />
+          </div>
+          <div>
+            <h5>Eligible Departments</h5>
+            <input type="text" id="eligibleDepartments" class="input" />
+          </div>
+          <div>
+            <h5>Min 10th Percentage</h5>
+            <input
+              type="number"
+              min="0"
+              max="100"
+              step="0.01"
+              id="minTenthPercentage"
+              class="input"
+            />
+          </div>
+          <div>
+            <h5>Min 12th Percentage</h5>
+            <input
+              type="number"
+              min="0"
+              max="100"
+              step="0.01"
+              id="minTwelfthPercentage"
+              class="input"
+            />
+          </div>
+          <div>
+            <h5>Min Degree Percentage</h5>
+            <input
+              type="number"
+              min="0"
+              max="100"
+              step="0.01"
+              id="minDegreePercentage"
+              class="input"
+            />
+          </div>
+          <div>
+            <h5>Max Standing Arrears</h5>
+            <input
+              type="number"
+              min="0"
+              max="100"
+              id="maxStandingArrears"
+              class="input"
+            />
+          </div>
+          <div>
+            <h5>Max History of Arrears</h5>
+            <input
+              type="number"
+              min="0"
+              max="100"
+              id="maxHistoryOfArrears"
+              class="input"
+            />
+          </div>
+          <div>
+            <h5>Salary</h5>
+            <input type="number" min="0" id="Salary" class="input" />
+          </div>
+          <div>
+            <h5>Registration Last Date</h5>
+            <input type="date" id="registrationLastDate" class="input" />
+          </div>
+          <div>
+            <h5>Campus Date</h5>
+            <input type="date" id="campusDate" class="input" />
+          </div>
+
+          <button type="submit" id="postJob" class="btn">Add Company</button>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/CompanyPostJob.js"></script>
+    <script type="text/javascript" src="js/logout.js"></script>
+  </body>
+</html>
