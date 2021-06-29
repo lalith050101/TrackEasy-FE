@@ -2,121 +2,209 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="img/avatar2.png" />
+    <link rel="stylesheet" href="css/companypostjobcss.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Post Job - Track Easy</title>
   </head>
   <body>
-    <div class="container">
-      <div>
-        <button id="logout">Logout</button>
-      </div>
-
-      <div>
-        <form onsubmit="postJobfn(event)">
+    <div class="topnav">
+      <img src="img/avatar2.png">
+      <a class="active" href="CompanyHomePage.html">Home</a>
+          <input style="float:right;" type="submit" id="logout" value="Logout">
+        </div>
+    
           <div>
-            <h5>Company Name</h5>
-            <input type="text" id="companyName" class="input" />
+            <form onsubmit="postJobfn(event)">
+        <div>
+                <div class="row">
+            <div class="col-25">
+                  <label for="comapnyName">Company Name</label>
+            </div>
+            <div class="col-75">
+                  <input type="text" id="companyName"  class="input" />
+                </div>
+              </div>
+              <div>
+                <div class="row">
+            <div class="col-25">
+                  <label for="jobType">Job Type</label>
+            </div>
+            <div class="col-75">
+                  <input type="text" id="jobType"  class="input" />
+                </div>
+              </div>
+                <div>
+                <div class="row">
+            <div class="col-25">
+                  <label for="jobTitle">Job Title</label>
+            </div>
+            <div class="col-75">
+                  <input type="text" id="jobTitle"  class="input" />
+                </div>
+              </div>
+              <div>
+                <div class="row">
+            <div class="col-25">
+                  <label for="jobDescription">Job Description</label>
+            </div>
+            <div class="col-75">
+                  <textarea id="jobDescription" rows="6" cols="50"  class="input" /></textarea>
+                </div>
+              </div>
+              <div>
+                <div class="row">
+            <div class="col-25">
+                  <label for="jobLocation">Job Location</label>
+            </div>
+            <div class="col-75">
+                  <input type="text" id="jobLocation"  class="input" />
+                </div>
+              </div>
+              <div>
+                <div class="row">
+            <div class="col-25">
+                  <label for="eligibility">Eligibility</label>
+            </div>
+            <div class="col-75">
+                  <input type="text" id="eligibility"  class="input" />
+                </div>
+              </div>
+              <div>
+                <div class="row">
+            <div class="col-25">
+                  <label for="eligibleBatch">Eligible Batch</label>
+            </div>
+            <div class="col-75">
+                  <input type="number" id="eligibleBatch"  class="input" />
+                </div>
+              </div>
+                <div>
+                <div class="row">
+            <div class="col-25">
+                  <label for="eligibleDepartments">Eligible Departments</label>
+            </div>
+            <div class="col-75">
+                  <input type="text" id="eligibleDepartments"  class="input" />
+                </div>
+              </div>
+              <div>
+                <div class="row">
+            <div class="col-25">
+                  <label for="minTenthPercentage">Min 10th Percentage</label>
+            </div>
+            <div class="col-75">
+                <input
+                  type="number"
+                  min="0"
+                  max="100"
+                  step="0.01"
+                  id="minTenthPercentage"
+                  class="input"
+                />
+              </div>
           </div>
           <div>
-            <h5>Job Type</h5>
-            <input type="text" id="jobType" class="input" />
+                <div class="row">
+            <div class="col-25">
+                  <label for="minTwelfthPercentage">Min 12th Percentage</label>
+            </div>
+            <div class="col-75">
+                <input
+                  type="number"
+                  min="0"
+                  max="100"
+                  step="0.01"
+                  id="minTwelfthPercentage"
+                  class="input"
+                />
+              </div>
           </div>
-          <div>
-            <h5>Job Title</h5>
-            <input type="text" id="jobTitle" class="input" />
+              <div>
+                <div class="row">
+            <div class="col-25">
+                  <label for="minDegreePercentage">Min Degree Percentage</label>
+            </div>
+            <div class="col-75">
+                <input
+                  type="number"
+                  min="0"
+                  max="100"
+                  step="0.01"
+                  id="minDegreePercentage"
+                  class="input"
+                />
+              </div>
           </div>
-          <div>
-            <h5>Job Description</h5>
-            <textarea id="jobDescription" rows="6" cols="50"></textarea>
+              <div>
+                <div class="row">
+            <div class="col-25">
+                  <label for="maxStandingArrears">Max Standing Arrears</label>
+            </div>
+            <div class="col-75">
+                <input
+                  type="number"
+                  min="0"
+                  max="100"
+                  step="1"
+                  id="maxStandingArrears"
+                  class="input"
+                />
+              </div>
           </div>
-          <div>
-            <h5>Job Location</h5>
-            <input type="text" id="jobLocation" class="input" />
+              <div>
+                <div class="row">
+            <div class="col-25">
+                  <label for="maxHistoryOfArrears">Max History of Arrears</label>
+            </div>
+            <div class="col-75">
+                <input
+                  type="number"
+                  min="0"
+                  max="100"
+                  step="1"
+                  id="maxHistoryOfArrears"
+                  class="input"
+                />
+              </div>
           </div>
-          <div>
-            <h5>Eligibility</h5>
-            <input type="text" id="eligibility" class="input" />
+              <div>
+                <div class="row">
+            <div class="col-25">
+                  <label for="salary">Salary</label>
+            </div>
+            <div class="col-75">
+                  <input type="number" min="0" id="salary"  class="input" />
+                </div>
+              </div>
+              <div>
+                <div class="row">
+            <div class="col-25">
+                  <label for="registrationLastDate">Registration Last Date</label>
+            </div>
+            <div class="col-75">
+                  <input type="date" id="registrationLastDate"  class="input" />
+                </div>
+              </div>
+              <div>
+                <div class="row">
+            <div class="col-25">
+                  <label for="campusDate">Campus Date</label>
+            </div>
+             <div class="col-75"> 
+                  <input type="date" id="campusDate"  class="input" />
+                </div>
+              </div>
+          <br/>
+          <br/>
+             <center>
+    
+              <input type="submit" id="postJob" value="Post Job" class="btn">
+          <center>
+            </form>
           </div>
-          <div>
-            <h5>Eligible Batch</h5>
-            <input type="number" id="eligibleBatch" class="input" />
-          </div>
-          <div>
-            <h5>Eligible Departments</h5>
-            <input type="text" id="eligibleDepartments" class="input" />
-          </div>
-          <div>
-            <h5>Min 10th Percentage</h5>
-            <input
-              type="number"
-              min="0"
-              max="100"
-              step="0.01"
-              id="minTenthPercentage"
-              class="input"
-            />
-          </div>
-          <div>
-            <h5>Min 12th Percentage</h5>
-            <input
-              type="number"
-              min="0"
-              max="100"
-              step="0.01"
-              id="minTwelfthPercentage"
-              class="input"
-            />
-          </div>
-          <div>
-            <h5>Min Degree Percentage</h5>
-            <input
-              type="number"
-              min="0"
-              max="100"
-              step="0.01"
-              id="minDegreePercentage"
-              class="input"
-            />
-          </div>
-          <div>
-            <h5>Max Standing Arrears</h5>
-            <input
-              type="number"
-              min="0"
-              max="100"
-              id="maxStandingArrears"
-              class="input"
-            />
-          </div>
-          <div>
-            <h5>Max History of Arrears</h5>
-            <input
-              type="number"
-              min="0"
-              max="100"
-              id="maxHistoryOfArrears"
-              class="input"
-            />
-          </div>
-          <div>
-            <h5>Salary</h5>
-            <input type="number" min="0" id="salary" class="input" />
-          </div>
-          <div>
-            <h5>Registration Last Date</h5>
-            <input type="date" id="registrationLastDate" class="input" />
-          </div>
-          <div>
-            <h5>Campus Date</h5>
-            <input type="date" id="campusDate" class="input" />
-          </div>
-
-          <button type="submit" id="postJob" class="btn">Post Job</button>
-        </form>
-      </div>
-    </div>
-    <script type="text/javascript" src="js/CompanyPostJob.js"></script>
-    <script type="text/javascript" src="js/logout.js"></script>
+        </div>
+        <script type="text/javascript" src="js/CompanyPostJob.js"></script>
+        <script type="text/javascript" src="js/logout.js"></script> 
   </body>
 </html>

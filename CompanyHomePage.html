@@ -2,34 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/companyhomecss.css" />
+    <link rel="icon" href="img/avatar2.png" />
     <title>Home Page - TrackEasy</title>
   </head>
   <body>
-    <div>
-      <a href="CompanyHomePage.html">Home</a>
+    <div class="topnav">
+      <img src="img/avatar2.png" />
+      <a href="CompanyHomePage.html" class="active">Home</a>
       <a href="CompanyPostJob.html">Post Job</a>
-      <button id="logout">Logout</button>
+      <input style="float: right" type="submit" id="logout" value="Logout" />
     </div>
 
-    <div>
-      <h2>Jobs Posted by You</h2>
+    <center>
+      <div>
+        <h2>Jobs Posted by You</h2>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Company Name</th>
-            <th>Job Type</th>
-            <th>Job Title</th>
-            <th>Eligible Batch</th>
-            <th>Eligible Departments</th>
-            <th>Salary</th>
-          </tr>
-        </thead>
-        <tbody id="jobs"></tbody>
-      </table>
-    </div>
+        <table id="joblist">
+          <thead>
+            <tr>
+              <th>Company Name</th>
+              <th>Job Type</th>
+              <th>Job Title</th>
+              <th>Eligible Batch</th>
+              <th>Eligible Departments</th>
+              <th>Salary</th>
+            </tr>
+          </thead>
+          <tbody id="jobs"></tbody>
+        </table>
+      </div>
+    </center>
     <script type="text/javascript" src="js/CompanyHomePage.js"></script>
 
     <script type="text/javascript" src="js/logout.js"></script>
