@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/adminhomecss.css" />
+    <link rel="stylesheet" href="css/adminViewStudentscss.css" />
     <link rel="icon" href="img/avatar2.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Home - Track Easy</title>
+    <title>View Students - Track Easy</title>
   </head>
-  <body id="adminpage">
+  <body id="adminViewStudents">
     <div class="topnav">
       <img src="img/avatar2.png" />
       <a class="active" href="AdminHomePage.html">Home</a>
@@ -22,26 +22,30 @@
 
     <div>
       <center>
-        <h2>ALL JOBS</h2>
+        <h2>ALL STUDENTS</h2>
         <br />
 
         <table id="tablelist">
           <thead>
             <tr>
-              <!-- <th>Job Id</th> -->
-              <th>Company Name</th>
-              <th>Job Type</th>
-              <th>Job Title</th>
-              <th>Eligible Batch</th>
-              <th>Eligible Departments</th>
-              <th>Salary</th>
+              <th>Email</th>
+              <th>Registration Number</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Department</th>
+              <th>Batch</th>
+              <th>10th Percentage</th>
+              <th>12th Percentage</th>
+              <th>Degree Percentage</th>
+              <th>Standing Arrears</th>
+              <th>History of Arrears</th>
             </tr>
           </thead>
-          <tbody id="jobs"></tbody>
+          <tbody id="students"></tbody>
         </table>
       </center>
     </div>
-    <script type="text/javascript" src="js/AdminHomePage.js"></script>
+    <script type="text/javascript" src="js/AdminViewStudents.js"></script>
 
     <script type="text/javascript" src="js/logout.js"></script>
   </body>

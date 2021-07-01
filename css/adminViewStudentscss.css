@@ -93,53 +93,30 @@ img {
 }
 
 /* css for table */
-#joblist {
+#tablelist {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 60%;
+  width: 90%;
 }
 
-#joblist td,
-#joblist th {
+#tablelist td,
+#tablelist th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#joblist tr:nth-child(even) {
+#tablelist tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-#joblist tr:hover {
+#tablelist tr:hover {
   background-color: #ddd;
 }
 
-#joblist th {
+#tablelist th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
   background-color: #6c63ff;
   color: white;
-}
-
-/* css for view button */
-.view {
-  text-align: center;
-  background-color: #38d39f;
-  color: #fff;
-  padding: 12px 20px;
-  font-family: "Poppins", sans-serif;
-  outline: none;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: 0.5s;
-  margin: 1rem 0;
-  text-transform: uppercase;
-  background-size: 200%;
-}
-
-.i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

@@ -25,20 +25,22 @@ document.addEventListener("DOMContentLoaded", (e) => {
       document.getElementById("lastName").value = job.lastName;
       document.getElementById("department").value = job.department;
       document.getElementById("batch").value = job.batch;
-      document.getElementById("tenthPercentage").value = job.tenthPercentage;
+      document.getElementById("tenthPercentage").value =
+        job.tenthPercentage.toFixed(2);
       document.getElementById("tenthBoardOfStudy").value =
         job.tenthBoardOfStudy;
       document.getElementById("tenthInstitution").value = job.tenthInstitution;
       document.getElementById("tenthYearOfPass").value = job.tenthYearOfPass;
       document.getElementById("twelfthPercentage").value =
-        job.twelfthPercentage;
+        job.twelfthPercentage.toFixed(2);
       document.getElementById("twelfthBoardOfStudy").value =
         job.twelfthBoardOfStudy;
       document.getElementById("twelfthInstitution").value =
         job.twelfthInstitution;
       document.getElementById("twelfthYearOfPass").value =
         job.twelfthYearOfPass;
-      document.getElementById("degreePercentage").value = job.degreePercentage;
+      document.getElementById("degreePercentage").value =
+        job.degreePercentage.toFixed(2);
       document.getElementById("degreeUniversity").value = job.degreeUniversity;
       document.getElementById("degreeInstitution").value =
         job.degreeInstitution;

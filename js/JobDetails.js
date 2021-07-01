@@ -49,8 +49,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
       document.getElementById("registrationLastDate").innerHTML =
         data.registrationLastDate;
       document.getElementById("campusDate").innerHTML = data.campusDate;
-      document.getElementById("jobRoles").innerHTML = "";
-      document.getElementById("skills").innerHTML = "";
+      // document.getElementById("jobRoles").innerHTML = "";
+      // document.getElementById("skills").innerHTML = "";
       document.getElementById("salary").innerHTML = data.salary;
       document.getElementById(
         "applyButton"

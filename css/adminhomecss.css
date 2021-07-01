@@ -93,27 +93,27 @@ img {
 }
 
 /* css for table */
-#joblist {
+#tablelist {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 60%;
 }
 
-#joblist td,
-#joblist th {
+#tablelist td,
+#tablelist th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#joblisttr:nth-child(even) {
+#tablelist tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-#joblist tr:hover {
+#tablelist tr:hover {
   background-color: #ddd;
 }
 
-#joblist th {
+#tablelist th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;

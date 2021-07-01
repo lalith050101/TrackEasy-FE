@@ -1,11 +1,11 @@
-var adminpage = document.getElementById("adminpage");
-console.log("inside adminhomepage");
+var adminpage = document.getElementById("adminViewStudents");
+console.log("inside adminViewStudents");
 
 document.addEventListener("DOMContentLoaded", (e) => {
   console.log("inside event listener");
   let token = "Bearer " + JSON.parse(localStorage.getItem("userstatus")).token;
 
-  fetch("http://localhost:8080/admin/getAllJobs", {
+  fetch("http://localhost:8080/admin/getAllCompanies", {
     method: "GET",
     headers: {
       Authorization: token,
@@ -25,17 +25,13 @@ document.addEventListener("DOMContentLoaded", (e) => {
       if (data.length > 0) {
         var temp = "";
 
-        data.forEach((job) => {
+        data.forEach((company) => {
           temp += "<tr>";
-          // temp += "<td>" + job.jobId + "</td>";
-          temp += "<td>" + job.companyName + "</td>";
-          temp += "<td>" + job.jobType + "</td>";
-          temp += "<td>" + job.jobTitle + "</td>";
-          temp += "<td>" + job.eligibleBatch + "</td>";
-          temp += "<td>" + job.eligibleDepartments + "</td>";
-          temp += "<td>" + job.salary + "</td></tr>";
+          temp += "<td>" + company.username + "</td>";
+          temp += "<td>" + company.email + "</td>";
+          temp += "<td>" + company.mobileNumber + "</td></tr>";
         });
-        document.getElementById("jobs").innerHTML = temp;
+        document.getElementById("students").innerHTML = temp;
       }
     })
     .catch((error) => console.log("ERROR" + error));
