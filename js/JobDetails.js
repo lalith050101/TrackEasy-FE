@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
   console.log(jobId);
 
-  fetch("https://track-easy.herokuapp.com//student/getJobDetails/" + jobId, {
+  fetch("https://track-easy.herokuapp.com/student/getJobDetails/" + jobId, {
     method: "GET",
     headers: {
       Authorization: token,
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 function applyJob(jobId) {
   let token = "Bearer " + JSON.parse(localStorage.getItem("userstatus")).token;
 
-  fetch("https://track-easy.herokuapp.com//student/applyJob/" + jobId, {
+  fetch("https://track-easy.herokuapp.com/student/applyJob/" + jobId, {
     method: "POST",
     headers: {
       "Content-Type": "application/json; charset=UTF-8",

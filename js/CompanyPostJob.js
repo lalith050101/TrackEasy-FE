@@ -30,7 +30,7 @@ function postJobfn(e) {
 
   let token = "Bearer " + JSON.parse(localStorage.getItem("userstatus")).token;
 
-  fetch("https://track-easy.herokuapp.com//company/postJob", {
+  fetch("https://track-easy.herokuapp.com/company/postJob", {
     method: "POST",
     headers: {
       "Content-Type": "application/json; charset=UTF-8",

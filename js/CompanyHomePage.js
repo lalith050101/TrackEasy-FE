@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   console.log("inside event listener");
   let token = "Bearer " + JSON.parse(localStorage.getItem("userstatus")).token;
 
-  fetch("https://track-easy.herokuapp.com//company/getAllJobs", {
+  fetch("https://track-easy.herokuapp.com/company/getAllJobs", {
     method: "GET",
     headers: {
       Authorization: token,

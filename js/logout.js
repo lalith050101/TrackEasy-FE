@@ -4,7 +4,7 @@ logout.addEventListener("click", (e) => {
 
   let token = "Bearer " + JSON.parse(localStorage.getItem("userstatus")).token;
 
-  fetch("https://track-easy.herokuapp.com//logout", {
+  fetch("https://track-easy.herokuapp.com/logout", {
     method: "POST",
     headers: {
       "Content-Type": "application/json; charset=UTF-8",
