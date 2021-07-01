@@ -7,7 +7,7 @@ function addcompanyfn(e) {
   let mobno = document.getElementById("mobno").value;
   let token = "Bearer " + JSON.parse(localStorage.getItem("userstatus")).token;
 
-  fetch("http://localhost:8080/admin/addCompany", {
+  fetch("https://track-easy.herokuapp.com//admin/addCompany", {
     method: "POST",
     headers: {
       "Content-Type": "application/json; charset=UTF-8",

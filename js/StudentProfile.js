@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   console.log("inside event listener");
   let token = "Bearer " + JSON.parse(localStorage.getItem("userstatus")).token;
   console.log("inside student profile");
-  fetch("http://localhost:8080/student/getStudent", {
+  fetch("https://track-easy.herokuapp.com//student/getStudent", {
     method: "GET",
     headers: {
       Authorization: token,
@@ -114,7 +114,7 @@ function updateProfilefn(e) {
 
   let token = "Bearer " + JSON.parse(localStorage.getItem("userstatus")).token;
 
-  fetch("http://localhost:8080/student/updateStudent", {
+  fetch("https://track-easy.herokuapp.com//student/updateStudent", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json; charset=UTF-8",

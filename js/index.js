@@ -27,7 +27,7 @@ function loginfn(e) {
   var emailVal = email.value;
   var passwordVal = password.value;
 
-  fetch("http://localhost:8080/login", {
+  fetch("https://track-easy.herokuapp.com//login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json; charset=UTF-8",

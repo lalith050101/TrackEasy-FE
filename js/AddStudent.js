@@ -11,7 +11,7 @@ function addstudentfn(e) {
   let batch = document.getElementById("batch").value;
   let token = "Bearer " + JSON.parse(localStorage.getItem("userstatus")).token;
 
-  fetch("http://localhost:8080/admin/addStudent", {
+  fetch("https://track-easy.herokuapp.com//admin/addStudent", {
     method: "POST",
     headers: {
       "Content-Type": "application/json; charset=UTF-8",
