@@ -14,6 +14,7 @@ function postJobfn(e) {
   for (var checkbox of markedCheckbox) {
     if (checkbox.checked) departments += checkbox.value + ",";
   }
+  departments = departments.slice(0, -1);
   console.log("depts " + departments);
 
   let eligibleDepartments = departments;
