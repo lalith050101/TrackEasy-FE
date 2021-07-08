@@ -8,9 +8,16 @@ function postJobfn(e) {
   let jobLocation = document.getElementById("jobLocation").value;
   let eligibility = document.getElementById("eligibility").value;
   let eligibleBatch = document.getElementById("eligibleBatch").value;
-  let eligibleDepartments = document.getElementById(
-    "eligibleDepartments"
-  ).value;
+
+  let departments = "";
+  let markedCheckbox = document.getElementsByName("dept");
+  for (var checkbox of markedCheckbox) {
+    if (checkbox.checked) departments += checkbox.value + ",";
+  }
+  console.log("depts " + departments);
+
+  let eligibleDepartments = departments;
+
   let minTenthPercentage = document.getElementById("minTenthPercentage").value;
   let minTwelfthPercentage = document.getElementById(
     "minTwelfthPercentage"
