@@ -50,6 +50,7 @@ and control a web page as soon as possible
 */
   workbox.core.skipWaiting();
   workbox.core.clientsClaim();
+  console.log("workbox precaching and routing done!");
 } else {
   console.log("Oops! Workbox didn't load ðŸ‘º");
 }

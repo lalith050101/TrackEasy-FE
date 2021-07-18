@@ -94,6 +94,6 @@
     ],
     "start_url": "/index.html",
     "display": "standalone",
-    "background_color": "#000",
-    "theme_color": "#ffff00"
+    "background_color": "#FFEEEE",
+    "theme_color": "#FFEEEE"
   }
