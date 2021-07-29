@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="img/avatar2.png" />
+    <link rel="stylesheet" href="css/companypostjobcss.css" />
+    <link rel="stylesheet" href="css/checkbox.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notify - Track Easy</title>
+  </head>
+  <body>
+    <div class="topnav">
+      <a style="padding: 0%" href="CompanyHomePage.html"><img src="img/avatar2.png"/></a>
+      <a class="active" href="CompanyPostJob.html">Post Job</a>
+          <input style="float:right;" type="submit" id="logout" value="Logout">
+        </div>
+    
+          <div>
+            <form id="notifyForm" onsubmit="notify(event)">
+        <div>
+            <div class="row">
+            <div class="col-25">
+                  <label for="title">Title</label>
+            </div>
+            <div class="col-75">
+                  <input type="text" id="title"  class="input" />
+                </div>
+              </div>
+              <div>
+                
+                <div class="row">
+            <div class="col-25">
+                  <label for="description">Description</label>
+            </div>
+            <div class="col-75">
+                  <textarea id="description" rows="6" cols="50"  class="input" /></textarea>
+                </div>
+              </div>
+              
+              </div>
+          <br/>
+          <br/>
+             <center>
+    
+              <input type="submit" id="postJob" value="Notify" class="btn">
+          <center>
+            </form>
+          </div>
+        </div>
+        <script type="text/javascript" src="js/loggedIn.js"></script>
+       
+        <script type="text/javascript" src="js/CompanyNotify.js"></script>
+        <script type="text/javascript" src="js/logout.js"></script> 
+  </body>
+</html>

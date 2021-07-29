@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Track Easy</title>
+
+    <link rel="stylesheet" href="css/studentnotificationscss.css" />
+    <link rel="icon" href="img/avatar2.png" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <link
+      rel="apple-touch-icon"
+      href="img/maskable_icons/maskable_icon_x192.png"
+    />
+    <meta name="theme-color" content="#333" />
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="topnav">
+      <a style="padding: 0%" href="StudentHomePage.html"
+        ><img src="img/avatar2.png"
+      /></a>
+      <a href="StudentProfile.html">Profile</a>
+      <a href="StudentNotifications.html" class="notification">
+        <span class="fa fa-bell"></span>
+      </a>
+
+      <input style="float: right" type="submit" id="logout" value="Logout" />
+    </div>
+    <center>
+      <div>
+        <h2>NOTIFICATIONS</h2>
+        <table id="notificationList">
+          <thead>
+            <tr>
+              <th>Company Name</th>
+              <th>Title</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody id="notifications"></tbody>
+        </table>
+      </div>
+    </center>
+
+    <script type="text/javascript" src="js/loggedIn.js"></script>
+    <script type="text/javascript" src="js/StudentNotifications.js"></script>
+    <script type="text/javascript" src="js/logout.js"></script>
+    <script src="js/Notifications.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-messaging.js"></script>
+  </body>
+</html>

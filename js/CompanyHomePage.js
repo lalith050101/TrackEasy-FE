@@ -41,5 +41,5 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 function viewJobDetails(jobId) {
   console.log("jobid new");
-  //window.location = "JobDetails.html?jobId=" + jobId;
+  window.location = "CompanyNotify.html?jobId=" + jobId;
 }
