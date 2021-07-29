@@ -25,6 +25,12 @@ async function init() {
   fetch("https://track-easy.herokuapp.com/register", {
     method: "POST",
     body: currentToken,
+  }).then((res) => {
+    if (res.ok) {
+      console.log("success register");
+    } else {
+      console.log("register not successful");
+    }
   });
   //   showData();
 
@@ -34,6 +40,12 @@ async function init() {
     fetch("https://track-easy.herokuapp.com/register", {
       method: "POST",
       body: newToken,
+    }).then((res) => {
+      if (res.ok) {
+        console.log("success refresh register");
+      } else {
+        console.log("refresh register not successful");
+      }
     });
   });
 }
