@@ -1,6 +1,25 @@
 importScripts(
   "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js"
 );
+
+importScripts("https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js");
+
+importScripts(
+  "https://www.gstatic.com/firebasejs/7.10.0/firebase-messaging.js"
+);
+
+firebase.initializeApp({
+  apiKey: "AIzaSyDWdA0CLOO17kPItEDjL0-WXDzxCuRULLE",
+  projectId: "trackeasy-app",
+  messagingSenderId: "1092414320287",
+  appId: "1:1092414320287:web:fa69df1caa12c86e507caa",
+});
+
+const messaging = firebase.messaging();
+messaging.usePublicVapidKey(
+  "BKvKKRsnGZx8fHjNMYl87YjlybkC7rTK8eyVo9KGpCHKLqmrQFzgdu-_cfqfqnfV2MK9eEmS-IAq57wp7F74uxs"
+);
+
 if (workbox) {
   console.log("Yay! Workbox is loaded !");
   workbox.precaching.precacheAndRoute([]);
