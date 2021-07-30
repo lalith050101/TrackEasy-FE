@@ -14,9 +14,38 @@ firebase.initializeApp({
 });
 
 const messaging = firebase.messaging();
+
 messaging.usePublicVapidKey(
   "BKvKKRsnGZx8fHjNMYl87YjlybkC7rTK8eyVo9KGpCHKLqmrQFzgdu-_cfqfqnfV2MK9eEmS-IAq57wp7F74uxs"
 );
+
+messaging.onBackgroundMessage(function (payload) {
+  console.log(
+    "[firebase-messaging-sw.js] Received background message ",
+    payload
+  );
+  // Customize notification here
+  var notificationTitle = payload.notification.title;
+  var notificationOptions = {
+    body: payload.notification.body,
+    icon: payload.notification.icon,
+    data: { url: payload.notification.click_action }, //the url which we gonna use later
+    actions: [{ action: "StudentNotifications.html", title: "View" }],
+  };
+
+  self.registration.showNotification(notificationTitle, notificationOptions);
+});
+
+self.addEventListener("notificationclick", (event) => {
+  console.log("[Service Worker] Notification click Received.", event);
+  event.notification.close();
+
+  const launchUrl = event.action || event.notification.data.launchUrl;
+
+  if (launchUrl) {
+    event.waitUntil(clients.openWindow(launchUrl));
+  }
+});
 
 if (workbox) {
   console.log("Yay! Workbox is loaded !");
