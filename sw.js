@@ -28,9 +28,13 @@ messaging.onBackgroundMessage(function (payload) {
   var notificationTitle = payload.notification.title;
   var notificationOptions = {
     body: payload.notification.body,
-    icon: payload.notification.icon,
+    icon: "https://trackeasy.yvlalithkumar.codes/img/avatar2.png",
+    vibrate: [100, 50, 100],
     data: { url: payload.notification.click_action }, //the url which we gonna use later
-    actions: [{ action: "StudentNotifications.html", title: "View" }],
+    actions: [
+      { action: "StudentNotifications.html", title: "View" },
+      { action: "close", title: "Close notification" },
+    ],
   };
 
   self.registration.showNotification(notificationTitle, notificationOptions);
@@ -38,13 +42,24 @@ messaging.onBackgroundMessage(function (payload) {
 
 self.addEventListener("notificationclick", (event) => {
   console.log("[Service Worker] Notification click Received.", event);
-  event.notification.close();
+  //event.notification.close();
 
-  const launchUrl = event.action || event.notification.data.launchUrl;
+  var notification = event.notification;
+  var action = event.action;
 
-  if (launchUrl) {
-    event.waitUntil(clients.openWindow(launchUrl));
+  if (action === "close") {
+    notification.close();
+  } else {
+    const launchUrl = event.action || event.notification.data.launchUrl;
+    clients.openWindow(launchUrl);
+    notification.close();
   }
+
+  // const launchUrl = event.action || event.notification.data.launchUrl;
+
+  // if (launchUrl) {
+  //   event.waitUntil(clients.openWindow(launchUrl));
+  // }
 });
 
 if (workbox) {
