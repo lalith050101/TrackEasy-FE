@@ -13,11 +13,56 @@ firebase.initializeApp({
   appId: "1:1092414320287:web:fa69df1caa12c86e507caa",
 });
 
-const messaging = firebase.messaging();
+// messaging.usePublicVapidKey(
+//   "BKvKKRsnGZx8fHjNMYl87YjlybkC7rTK8eyVo9KGpCHKLqmrQFzgdu-_cfqfqnfV2MK9eEmS-IAq57wp7F74uxs"
+// );
+console.log("inside sw");
 
-messaging.usePublicVapidKey(
-  "BKvKKRsnGZx8fHjNMYl87YjlybkC7rTK8eyVo9KGpCHKLqmrQFzgdu-_cfqfqnfV2MK9eEmS-IAq57wp7F74uxs"
-);
+class CustomPushEvent extends Event {
+  constructor(data) {
+    super("push");
+
+    Object.assign(this, data);
+    this.custom = true;
+  }
+}
+
+/*
+ * Overrides push notification data, to avoid having 'notification' key and firebase blocking
+ * the message handler from being called
+ */
+self.addEventListener("push", (e) => {
+  // Skip if event is our own custom event
+  if (e.custom) return;
+
+  // Kep old event data to override
+  let oldData = e.data;
+
+  // Create a new event to dispatch, pull values from notification key and put it in data key,
+  // and then remove notification key
+  let newEvent = new CustomPushEvent({
+    data: {
+      json() {
+        let newData = oldData.json();
+        newData.data = {
+          ...newData.data,
+          ...newData.notification,
+        };
+        delete newData.notification;
+        return newData;
+      },
+    },
+    waitUntil: e.waitUntil.bind(e),
+  });
+
+  // Stop event propagation
+  e.stopImmediatePropagation();
+
+  // Dispatch the new wrapped event
+  dispatchEvent(newEvent);
+});
+
+const messaging = firebase.messaging();
 
 messaging.onBackgroundMessage(function (payload) {
   console.log(
@@ -25,19 +70,22 @@ messaging.onBackgroundMessage(function (payload) {
     payload
   );
   // Customize notification here
-  var notificationTitle = payload.notification.title;
+  var notificationTitle = payload.data.title;
   var notificationOptions = {
-    body: payload.notification.body,
+    body: payload.data.body,
     icon: "https://trackeasy.yvlalithkumar.codes/img/avatar2.png",
     vibrate: [100, 50, 100],
-    data: { url: payload.notification.click_action }, //the url which we gonna use later
+    //data: { url: payload.notification.click_action }, //the url which we gonna use later
     actions: [
       { action: "StudentNotifications.html", title: "View" },
       { action: "close", title: "Close notification" },
     ],
   };
 
-  self.registration.showNotification(notificationTitle, notificationOptions);
+  return self.registration.showNotification(
+    notificationTitle,
+    notificationOptions
+  );
 });
 
 self.addEventListener("notificationclick", (event) => {
