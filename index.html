@@ -91,7 +91,7 @@
           body: currentToken,
         }).then((res) => {
           if (res.ok) {
-            console.log("success register: " + currentToken);
+            console.log("success register: ");
           } else {
             console.log("register not successful");
           }
@@ -115,7 +115,7 @@
 
         let enableForegroundNotification = true;
         messaging.onMessage(function (payload) {
-          console.log("Message received. ", payload);
+          console.log("Message received. ");
 
           if (enableForegroundNotification) {
             // let notification = payload.data;
@@ -124,7 +124,7 @@
             // });
 
             navigator.serviceWorker.getRegistrations().then((registration) => {
-              console.log(" Received foreground message ", payload);
+              console.log(" Received foreground message ");
               // Customize notification here
               var notificationTitle = payload.data.title;
               var notificationOptions = {

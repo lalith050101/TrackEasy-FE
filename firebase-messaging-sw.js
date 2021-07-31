@@ -65,10 +65,7 @@ self.addEventListener("push", (e) => {
 const messaging = firebase.messaging();
 
 messaging.onBackgroundMessage(function (payload) {
-  console.log(
-    "[firebase-messaging-sw.js] Received background message ",
-    payload
-  );
+  console.log("[firebase-messaging-sw.js] Received background message ");
   // Customize notification here
   var notificationTitle = payload.data.title;
   var notificationOptions = {
@@ -89,7 +86,7 @@ messaging.onBackgroundMessage(function (payload) {
 });
 
 self.addEventListener("notificationclick", (event) => {
-  console.log("[Service Worker] Notification click Received.", event);
+  console.log("[Service Worker] Notification click Received.");
   //event.notification.close();
 
   var notification = event.notification;
