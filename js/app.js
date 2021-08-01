@@ -1,12 +1,12 @@
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("../sw.js")
-      .then(() => {
-        console.log("😊 Service Worker Registered");
-      })
-      .catch((err) => {
-        console.log("😢 Registration Failed!", err);
-      });
-  });
-}
+// if ("serviceWorker" in navigator) {
+//   window.addEventListener("load", () => {
+//     navigator.serviceWorker
+//       .register("../sw.js")
+//       .then(() => {
+//         console.log("😊 Service Worker Registered");
+//       })
+//       .catch((err) => {
+//         console.log("😢 Registration Failed!", err);
+//       });
+//   });
+// }
