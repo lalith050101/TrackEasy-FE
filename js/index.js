@@ -21,6 +21,23 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const login = document.getElementById("login");
 
+document.addEventListener("DOMContentLoaded", (e) => {
+  console.log("inside domcontentloaded event listener");
+
+  fetch("https://track-easy.herokuapp.com/", {
+    method: "GET",
+  })
+    .then((res) => {
+      if (res.ok) {
+        console.log("success");
+      } else {
+        console.log("not successful");
+      }
+    })
+
+    .catch((error) => console.log("ERROR" + error));
+});
+
 function loginfn(e) {
   e.preventDefault();
   console.log("inside event listener");
