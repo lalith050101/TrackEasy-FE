@@ -12,6 +12,4 @@ Java, Spring Boot, Spring Security, Spring Data JPA and MySQL database
 Push Notifications using Firebase Cloud Messaging <br>
 JWT is used for authentication
 
-View Project: https://trackeasy.yvlalithkumar.codes/ <br>
-
 Back End Repository: https://github.com/lalith050101/TrackEasy-BE
